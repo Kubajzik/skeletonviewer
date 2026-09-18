@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 228 17% 6%;
+    --foreground: 40 20% 96%;
+    --card: 225 14% 11.5%;
+    --card-foreground: 40 20% 96%;
+    --popover: 225 14% 10%;
+    --popover-foreground: 40 20% 96%;
+    --primary: 35 100% 52%;
+    --primary-foreground: 228 20% 6%;
+    --secondary: 225 13% 16%;
+    --secondary-foreground: 40 20% 96%;
+    --muted: 225 13% 14%;
+    --muted-foreground: 228 8% 62%;
+    --accent: 35 100% 52%;
+    --accent-foreground: 228 20% 6%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 227 14% 18%;
+    --input: 227 14% 18%;
+    --ring: 35 100% 52%;
+    --chart-1: 35 100% 52%;
+    --chart-2: 220 70% 50%;
+    --chart-3: 160 60% 45%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    --radius: 0.75rem;
+    --font-heading: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+    --font-body: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+    --font-display: "Playfair Display", ui-serif, Georgia, serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --sidebar-background: 225 14% 8%;
+    --sidebar-foreground: 40 20% 96%;
+    --sidebar-primary: 35 100% 52%;
+    --sidebar-primary-foreground: 228 20% 6%;
+    --sidebar-accent: 225 13% 16%;
+    --sidebar-accent-foreground: 40 20% 96%;
+    --sidebar-border: 227 14% 18%;
+    --sidebar-ring: 35 100% 52%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  ::selection {
+    background: rgba(255, 159, 10, 0.28);
+  }
+}
+
+@keyframes glow-pulse {
+  0%,
+  100% {
+    opacity: 0.05;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.14;
+    transform: scale(1.1);
+  }
+}
+
+.animate-glow {
+  animation: glow-pulse 7s ease-in-out infinite;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2a2d38;
+  border-radius: 8px;
+}
+
+html {
+  scrollbar-color: #2a2d38 #0d0e12;
+}
